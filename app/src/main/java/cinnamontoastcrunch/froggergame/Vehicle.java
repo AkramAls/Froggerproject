@@ -2,16 +2,18 @@ package cinnamontoastcrunch.froggergame;
 
 import android.graphics.Canvas;
 import android.graphics.Paint;
+import android.graphics.Point;
 import android.graphics.Rect;
 
 /**
- * Created by Weine on 3/6/2017.
+ * Created by Jpollock on 3/6/2017.
  */
 
 public class Vehicle implements GameObject {
 
     private Rect rectangle;
     private int color;
+    String direction;
 
     public Vehicle(Rect rectangle, int color) {
         this.rectangle = rectangle;
@@ -36,6 +38,11 @@ public class Vehicle implements GameObject {
 
     @Override
     public void update() {
+
+    }
+
+    public void update(Point point) {
+        rectangle.set(point.x - rectangle.width()/2, point.y - rectangle.height()/2, point.x + rectangle.width()/2, point.y + rectangle.height()/2); // Left, Top, Right, Bottom
 
     }
 

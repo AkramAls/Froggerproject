@@ -43,6 +43,7 @@ public class MainThread extends Thread {
             try {
                 canvas = this.surfaceHolder.lockCanvas();
                 synchronized (surfaceHolder) {
+                    this.gamePanel.moveCars();
                     this.gamePanel.update();
                     this.gamePanel.draw(canvas);
                 }
@@ -69,6 +70,7 @@ public class MainThread extends Thread {
                 frameCount = 0;
                 totalTime = 0;
                 System.out.println(averageFPS); // Print FPS to see if program runs correctly.
+               // this.gamePanel.moveCars();
             }
         }
     }

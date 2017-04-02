@@ -6,7 +6,7 @@ import android.graphics.Point;
 import android.graphics.Rect;
 
 /**
- * Created by Weine on 3/4/2017.
+ * Created by JPollock on 3/4/2017.
  */
 
 public class Player implements GameObject {

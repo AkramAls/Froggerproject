@@ -6,7 +6,7 @@ import android.graphics.Point;
 import android.graphics.Rect;
 
 /**
- * Created by Weine on 3/6/2017.
+ * Created by JPollock on 3/6/2017.
  */
 
 public class MovementButton implements GameObject {
