@@ -9,19 +9,20 @@ import android.graphics.Rect;
  * Created by Jpollock on 3/6/2017.
  */
 
-public class Vehicle implements GameObject {
+public class Powerup implements GameObject {
 
     private Rect rectangle;
     private int color;
-    String direction;
+    String type;
 
     public Rect getRectangle() {
         return rectangle;
     }
 
-    public Vehicle(Rect rectangle, int color) {
+    public Powerup(Rect rectangle, int color, String type) {
         this.rectangle = rectangle;
         this.color = color;
+        this.type = type;
     }
 
     public boolean playerCollide(Player player) {

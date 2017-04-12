@@ -36,6 +36,16 @@ public class Player implements GameObject {
 
     }
 
+
+    public boolean powerupCollide(Powerup powerup) {
+        if(rectangle.contains(powerup.getRectangle().left, powerup.getRectangle().top)
+                || rectangle.contains(powerup.getRectangle().right, powerup.getRectangle().top)
+                || rectangle.contains(powerup.getRectangle().left, powerup.getRectangle().bottom)
+                || rectangle.contains(powerup.getRectangle().right, powerup.getRectangle().bottom)) // Collision detection between player and vehicles.
+            return true;
+        return false;
+    }
+
     public void update(Point point) {
         rectangle.set(point.x - rectangle.width()/2, point.y - rectangle.height()/2, point.x + rectangle.width()/2, point.y + rectangle.height()/2); // Left, Top, Right, Bottom
     }
